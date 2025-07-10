@@ -1,10 +1,10 @@
 {
   "name": "verb",
   "version": "0.0.1",
-  "description": "A monorepo template built with Bun, Elysia, Vite, and React",
+  "description": "A monorepo template built with Vite, Elysia, React and Bun",
   "author": "René Schober",
   "license": "MIT",
-  "homepage": "https://github.com/CodingRuo/RuoCore",
+  "homepage": "https://github.com/CodingRuo/verb",
   "workspaces": [
     "./server",
     "./client",
