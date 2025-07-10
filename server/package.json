@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "bun --watch run src/index.ts",
+    "dev:server": "concurrently \"bun dev:db\" \"nuxt dev\" \"bunx drizzle-kit studio\" ",
+    "dev:db": "turso dev --db-file local.db",
+    "dev:studio": "bunx drizzle-kit studio",
+    "email": "email dev --dir src/emails"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.3.3",
+    "@elysiajs/swagger": "^1.3.1",
+    "@libsql/client": "^0.15.9",
+    "@react-email/components": "^0.2.0",
+    "@t3-oss/env-core": "^0.13.8",
+    "better-auth": "^1.2.12",
+    "drizzle-orm": "^0.44.2",
+    "elysia": "^1.3.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "shared": "workspace:*",
+    "zod": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.31.4",
+    "react-email": "^4.1.1"
+  }
+}
